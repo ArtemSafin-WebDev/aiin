@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIIN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body class="balls">
+    <div class="registration">
+      <div class="container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite">
+          <symbol id="checkmark" viewBox="0 0 17 12">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16.6899 0.276133C17.0897 0.657175 17.1049 1.29016 16.7239 1.68994L7.19262 11.6899C7.00448 11.8873 6.74389 11.9993 6.4712 12C6.1985 12.0007 5.93737 11.8899 5.74826 11.6935L0.279514 6.01165C-0.103478 5.61374 -0.0913813 4.98069 0.306533 4.5977C0.704446 4.2147 1.3375 4.2268 1.72049 4.62471L6.46522 9.5543L15.2761 0.310064C15.6572 -0.0897175 16.2902 -0.104909 16.6899 0.276133Z"
+            />
+          </symbol>
+          <symbol viewBox="0 0 32 32" id="password-show">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M15.9999 12.2266C13.9122 12.2266 12.2266 13.9122 12.2266 15.9999C12.2266 18.0876 13.9122 19.7732 15.9999 19.7732C18.0876 19.7732 19.7732 18.0876 19.7732 15.9999C19.7732 13.9122 18.0876 12.2266 15.9999 12.2266ZM10.2266 15.9999C10.2266 12.8076 12.8076 10.2266 15.9999 10.2266C19.1922 10.2266 21.7732 12.8076 21.7732 15.9999C21.7732 19.1922 19.1922 21.7732 15.9999 21.7732C12.8076 21.7732 10.2266 19.1922 10.2266 15.9999Z"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3.00978 11.9959C6.19767 6.98476 10.8692 3.95996 15.9998 3.95996C21.1304 3.95996 25.8018 6.98468 28.9897 11.9957C29.7167 13.135 30.0465 14.5945 30.0465 15.9933C30.0465 17.392 29.7167 18.8515 28.9898 19.9907C25.8019 25.0018 21.1304 28.0266 15.9998 28.0266C10.8689 28.0266 6.19727 25.0016 3.00937 19.99C2.28273 18.8509 1.95312 17.3918 1.95312 15.9933C1.95312 14.5946 2.28286 13.1351 3.00978 11.9959ZM15.9998 5.95996C11.7173 5.95996 7.61565 8.48156 4.69688 13.07L4.69605 13.0713C4.22327 13.812 3.95312 14.8723 3.95312 15.9933C3.95312 17.1143 4.22327 18.1746 4.69605 18.9153L4.69688 18.9166C7.61565 23.505 11.7173 26.0266 15.9998 26.0266C20.2823 26.0266 24.3839 23.505 27.3027 18.9166L27.3035 18.9153C27.7763 18.1746 28.0465 17.1143 28.0465 15.9933C28.0465 14.8723 27.7763 13.812 27.3035 13.0713L27.3027 13.07C24.3839 8.48156 20.2823 5.95996 15.9998 5.95996Z"
+            />
+          </symbol>
+          <symbol viewBox="0 0 32 32" id="password-hide">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M30.0402 3.37385C30.4307 2.98333 30.4307 2.35017 30.0402 1.95964C29.6496 1.56912 29.0165 1.56912 28.6259 1.95964L23.9741 6.61145C21.5771 4.91326 18.8447 3.97339 15.9998 3.97339C10.8692 3.97339 6.19767 6.99819 3.00978 12.0093C2.28286 13.1486 1.95312 14.608 1.95312 16.0067C1.95312 17.4054 2.28284 18.8648 3.00974 20.004C4.01687 21.5848 5.18109 22.9765 6.45341 24.1324L1.9594 28.6264C1.56887 29.017 1.56887 29.6501 1.9594 30.0406C2.34992 30.4312 2.98309 30.4312 3.37361 30.0406L13.3336 20.0806L13.3353 20.079L20.0803 13.3339C20.0847 13.3295 20.0891 13.3251 20.0934 13.3206L30.0402 3.37385ZM19.3122 11.2734L22.5365 8.04911C20.5167 6.69188 18.2835 5.97339 15.9998 5.97339C11.7173 5.97339 7.61565 8.49499 4.69688 13.0834L4.69605 13.0848C4.22327 13.8254 3.95312 14.8857 3.95312 16.0067C3.95312 17.1277 4.22327 18.188 4.69605 18.9287L4.69651 18.9294C5.63464 20.4019 6.71105 21.6766 7.86945 22.7164L11.2733 19.3126C10.6139 18.3756 10.2266 17.2355 10.2266 16.0001C10.2266 12.8079 12.8076 10.2268 15.9999 10.2268C17.2352 10.2268 18.3752 10.6141 19.3122 11.2734ZM12.2266 16.0001C12.2266 13.9124 13.9122 12.2268 15.9999 12.2268C16.6804 12.2268 17.3152 12.4054 17.8653 12.7205L12.7203 17.8655C12.4051 17.3155 12.2266 16.6806 12.2266 16.0001ZM26.1062 9.79431C26.5366 9.44816 27.1661 9.51642 27.5122 9.94676C28.0237 10.5827 28.5262 11.266 28.9897 11.9962C29.7166 13.1354 30.0463 14.5948 30.0463 15.9935C30.0463 17.3922 29.7166 18.8517 28.9897 19.9909C25.8018 25.0021 21.1303 28.0269 15.9997 28.0269C14.2176 28.0269 12.4728 27.65 10.8383 26.9618C10.3293 26.7475 10.0904 26.1611 10.3047 25.6521C10.519 25.1431 11.1054 24.9042 11.6144 25.1186C13.0199 25.7103 14.5017 26.0269 15.9997 26.0269C20.2821 26.0269 24.3838 23.5053 27.3026 18.9168L27.3034 18.9155C27.7762 18.1748 28.0463 17.1145 28.0463 15.9935C28.0463 14.8725 27.7762 13.8122 27.3034 13.0716L27.302 13.0693C26.8858 12.4135 26.4286 11.7906 25.9538 11.2003C25.6076 10.7699 25.6759 10.1405 26.1062 9.79431ZM21.663 17.1149C21.7632 16.5717 21.4041 16.0503 20.861 15.9501C20.3178 15.85 19.7963 16.2091 19.6962 16.7522C19.4247 18.2244 18.2105 19.4386 16.7383 19.7101C16.1951 19.8103 15.836 20.3317 15.9362 20.8749C16.0363 21.418 16.5578 21.7771 17.101 21.6769C19.3888 21.2551 21.2412 19.4027 21.663 17.1149Z"
+            />
+          </symbol>
+          <symbol viewBox="0 0 32 32" id="select-arrow">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M15.3311 21.7433L5.33105 12.7433L6.66898 11.2567L16 19.6546L25.3311 11.2567L26.669 12.7433L16.669 21.7433C16.2887 22.0856 15.7114 22.0856 15.3311 21.7433Z"
+            />
+          </symbol>
+        </svg>
+
+        <h1 class="registration__heading">
+          Регистрация на форум DID 2024 & AIIN
+        </h1>
+        <div class="registration__wrapper">
+          <div class="registration__steps">
+            <div class="registration__steps-item complete">
+              <div class="registration__steps-item-number">
+                1
+                <div class="registration__steps-item-number-checkmark">
+                  <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#checkmark"></use>
+                  </svg>
+                </div>
+              </div>
+              Личные данные
+            </div>
+            <div class="registration__steps-item current">
+              <div class="registration__steps-item-number">
+                2
+                <div class="registration__steps-item-number-checkmark">
+                  <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#checkmark"></use>
+                  </svg>
+                </div>
+              </div>
+              Об участии
+            </div>
+            <div class="registration__steps-item">
+              <div class="registration__steps-item-number">
+                3
+                <div class="registration__steps-item-number-checkmark">
+                  <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#checkmark"></use>
+                  </svg>
+                </div>
+              </div>
+              Финиш
+            </div>
+          </div>
+          <form
+            action="/"
+            method="POST"
+            class="registration__form"
+            data-need-validation=""
+          >
+            <div class="registration__form-first-step">
+              <div class="registration__fields">
+                <div class="registration__field registration__field--fullwidth">
+                  <label class="registration__field-label">
+                    <input
+                      type="text"
+                      name="your-name"
+                      class="registration__input"
+                      required=""
+                      placeholder="ФИО"
+                    />
+                    <span class="registration__field-label-text"> ФИО </span>
+                  </label>
+                </div>
+                <div class="registration__field">
+                  <label class="registration__field-label">
+                    <input
+                      type="text"
+                      name="your-birth"
+                      class="registration__input registration__input--date js-date-input"
+                      required=""
+                      placeholder="Дата рождения"
+                      data-parsley-date=""
+                    />
+                    <span class="registration__field-label-text">
+                      Дата рождения
+                    </span>
+                  </label>
+                </div>
+                <div class="registration__field">
+                  <div class="registration__gender">
+                    <div class="registration__gender-title">Пол</div>
+                    <div class="registration__gender-inputs">
+                      <label class="registration__gender-radio">
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="Ж"
+                          class="registration__gender-radio-input"
+                        />
+                        <span class="registration__gender-radio-box"> Ж </span>
+                      </label>
+                      <label class="registration__gender-radio">
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="М"
+                          class="registration__gender-radio-input"
+                        />
+                        <span class="registration__gender-radio-box"> М </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="registration__field registration__field--fullwidth">
+                  <label class="registration__field-label">
+                    <input
+                      type="tel"
+                      name="your-phone"
+                      class="registration__input js-phone-input"
+                      required=""
+                      placeholder="Телефон"
+                      data-parsley-phone=""
+                    />
+                    <span class="registration__field-label-text">
+                      Телефон
+                    </span>
+                  </label>
+                </div>
+                <div class="registration__field registration__field--fullwidth">
+                  <label class="registration__field-label">
+                    <input
+                      type="email"
+                      name="your-email"
+                      class="registration__input"
+                      required=""
+                      placeholder="E-mail"
+                    />
+                    <span class="registration__field-label-text"> E-mail </span>
+                  </label>
+                </div>
+                <div class="registration__field registration__field--fullwidth">
+                  <label class="registration__field-label">
+                    <input
+                      type="password"
+                      name="your-password"
+                      class="registration__input"
+                      required=""
+                      placeholder="Пароль"
+                    />
+                    <span class="registration__field-label-text"> Пароль </span>
+                  </label>
+                  <button
+                    class="registration__field-password-show"
+                    type="button"
+                  >
+                    <svg width="14" height="14" aria-hidden="true">
+                      <use xlink:href="#password-show"></use>
+                    </svg>
+                    <svg width="14" height="14" aria-hidden="true">
+                      <use xlink:href="#password-hide"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="registration__field registration__field--fullwidth">
+                  <label class="registration__field-label">
+                    <input
+                      type="password"
+                      name="your-password-confirmation"
+                      class="registration__input"
+                      required=""
+                      placeholder="Повторите пароль"
+                    />
+                    <span class="registration__field-label-text">
+                      Повторите пароль
+                    </span>
+                  </label>
+                  <button
+                    class="registration__field-password-show"
+                    type="button"
+                  >
+                    <svg width="14" height="14" aria-hidden="true">
+                      <use xlink:href="#password-show"></use>
+                    </svg>
+                    <svg width="14" height="14" aria-hidden="true">
+                      <use xlink:href="#password-hide"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="registration__checkboxes">
+                <div class="registration__checkbox-wrapper">
+                  <label class="registration__checkbox">
+                    <input
+                      type="checkbox"
+                      class="registration__checkbox-input"
+                      name="policy"
+                      value="Y"
+                      required=""
+                    />
+                    <span class="registration__checkbox-mark">
+                      <svg width="14" height="14" aria-hidden="true">
+                        <use xlink:href="#checkmark"></use>
+                      </svg>
+                    </span>
+                    <span class="registration__checkbox-text">
+                      Соглашаюсь на обработку персональных данных
+                    </span>
+                  </label>
+                </div>
+                <div class="registration__checkbox-wrapper">
+                  <label class="registration__checkbox">
+                    <input
+                      type="checkbox"
+                      class="registration__checkbox-input"
+                      name="offer"
+                      value="Y"
+                      required=""
+                    />
+                    <span class="registration__checkbox-mark">
+                      <svg width="14" height="14" aria-hidden="true">
+                        <use xlink:href="#checkmark"></use>
+                      </svg>
+                    </span>
+                    <span class="registration__checkbox-text">
+                      Соглашаюсь с договором оферты
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <button class="registration__submit" type="submit">Далее</button>
+            </div>
+            <div class="registration__form-second-step" style="display: none">
+              <div class="registration__fields">
+                <div class="registration__field registration__field--fullwidth">
+                  <div class="registration__select">
+                    <div class="registration__select-btn">
+                      <label class="registration__select-btn-label">
+                        <input
+                          type="text"
+                          class="registration__select-btn-input"
+                          name="your-city"
+                          placeholder="Город"
+                        />
+                        <span class="registration__select-btn-label-text">
+                          Город
+                        </span>
+                      </label>
+                      <svg width="14" height="14" aria-hidden="true">
+                        <use xlink:href="#select-arrow"></use>
+                      </svg>
+                    </div>
+                    <div class="registration__select-dropdown">
+                      <div class="registration__select-dropdown-inner">
+                        <label class="registration__select-option">
+                          <input
+                            type="radio"
+                            name="city"
+                            class="registration__select-option-input"
+                            value="Калач"
+                          />
+                          <span class="registration__select-option-text">
+                            Калач
+                          </span>
+                        </label>
+                        <label class="registration__select-option">
+                          <input
+                            type="radio"
+                            name="city"
+                            class="registration__select-option-input"
+                            value="Казань"
+                          />
+                          <span class="registration__select-option-text">
+                            Казань
+                          </span>
+                        </label>
+                        <label class="registration__select-option">
+                          <input
+                            type="radio"
+                            name="city"
+                            class="registration__select-option-input"
+                            value="Москва"
+                          />
+                          <span class="registration__select-option-text">
+                            Москва
+                          </span>
+                        </label>
+                        <div class="registration__select-no-results">
+                          Нет результатов
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="registration__field registration__field--fullwidth">
+                  <label class="registration__field-label">
+                    <input
+                      type="text"
+                      name="your-organization"
+                      class="registration__input"
+                      required=""
+                      placeholder="Организация"
+                    />
+                    <span class="registration__field-label-text">
+                      Организация
+                    </span>
+                  </label>
+                </div>
+                <div class="registration__field registration__field--fullwidth">
+                  <label class="registration__field-label">
+                    <input
+                      type="text"
+                      name="your-organization"
+                      class="registration__input"
+                      required=""
+                      placeholder="Организация"
+                    />
+                    <span class="registration__field-label-text">
+                      Должность
+                    </span>
+                  </label>
+                </div>
+                <div class="registration__field registration__field--fullwidth">
+                  <div class="registration__select">
+                    <div class="registration__select-btn">
+                      <label class="registration__select-btn-label">
+                        <input
+                          type="text"
+                          class="registration__select-btn-input"
+                          name="your-format"
+                          placeholder="Формат участия"
+                          readonly=""
+                        />
+                        <span class="registration__select-btn-label-text">
+                          Формат участия
+                        </span>
+                      </label>
+                      <svg width="14" height="14" aria-hidden="true">
+                        <use xlink:href="#select-arrow"></use>
+                      </svg>
+                    </div>
+                    <div class="registration__select-dropdown">
+                      <div class="registration__select-dropdown-inner">
+                        <label class="registration__select-option">
+                          <input
+                            type="radio"
+                            name="format"
+                            class="registration__select-option-input"
+                            value="Онлайн"
+                          />
+                          <span class="registration__select-option-text">
+                            Онлайн
+                          </span>
+                        </label>
+                        <label class="registration__select-option">
+                          <input
+                            type="radio"
+                            name="format"
+                            class="registration__select-option-input"
+                            value="Офлайн"
+                          />
+                          <span class="registration__select-option-text">
+                            Офлайн
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="registration__radios">
+                <label class="registration__radio">
+                  <input
+                    type="checkbox"
+                    name="is-company"
+                    value="Y"
+                    class="registration__radio-input"
+                  />
+                  <span class="registration__radio-mark"> </span>
+                  <span class="registration__radio-text">
+                    Я являюсь Юрлицом
+                  </span>
+                </label>
+              </div>
+              <button class="registration__submit" type="button" disabled="">
+                Далее
+              </button>
+            </div>
+            <div
+              class="registration__form-step-registered"
+              style="display: none"
+            >
+              <div class="registration__success">
+                <img
+                  src="/img/Fire.webp"
+                  alt=""
+                  class="registration__form-image"
+                />
+                <div class="registration__form-success-text">
+                  Вы зарегистрированы!
+                </div>
+                <a href="#" class="registration__form-link">
+                  Перейти в личный кабинет
+                </a>
+              </div>
+            </div>
+            <div
+              class="registration__form-step-before-pay"
+              style="display: none"
+            >
+              <div class="registration__success">
+                <img
+                  src="/img/lightning.webp"
+                  alt=""
+                  class="registration__form-image"
+                />
+                <div class="registration__form-success-text">
+                  Регистрация пройдена,<br />
+                  осталось оплатить участие!
+                </div>
+                <a href="#" class="registration__form-link">
+                  Перейти к оплате
+                </a>
+                <a href="#" class="registration__invitation">
+                  У меня есть приглашение
+                </a>
+              </div>
+            </div>
+            <div class="registration__form-step-pay" style="display: none">
+              <div class="registration__success">
+                <label class="registration__field-label">
+                  <input
+                    type="text"
+                    name="your-promo"
+                    class="registration__input"
+                    required=""
+                    placeholder="Промокод на скидку"
+                  />
+                  <span class="registration__field-label-text">
+                    Промокод на скидку
+                  </span>
+                </label>
+
+                <button class="registration__submit">Применить</button>
+                <a href="#" class="registration__invitation">
+                  Оплатить без промокода
+                </a>
+              </div>
+            </div>
+            <div
+              class="registration__form-step-invitation"
+              style="display: none"
+            >
+              <div class="registration__success">
+                <label class="registration__field-label">
+                  <input
+                    type="text"
+                    name="your-invitation"
+                    class="registration__input"
+                    required=""
+                    placeholder="Код приглашения из почты"
+                  />
+                  <span class="registration__field-label-text">
+                    Код приглашения из почты
+                  </span>
+                </label>
+
+                <button class="registration__submit">Применить</button>
+                <a href="#" class="registration__invitation">
+                  Оплатить без кода
+                </a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"
+      integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/customParseFormat.js"></script>
+
+    <script type="module">
+      import inputmask from "https://cdn.jsdelivr.net/npm/inputmask@5.0.9/+esm";
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const phoneInputs = Array.from(
+          document.querySelectorAll(".js-phone-input")
+        );
+
+        phoneInputs.forEach((input) => {
+          const instance = new inputmask.default({
+            mask: "+7 (999) 999-99-99",
+          });
+          instance.mask(input);
+        });
+        const dateInputs = Array.from(
+          document.querySelectorAll(".js-date-input")
+        );
+
+        dateInputs.forEach((input) => {
+          const instance = new inputmask.default({ mask: "99.99.9999" });
+          instance.mask(input);
+        });
+      });
+    </script>
+    <script src="/validation.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
